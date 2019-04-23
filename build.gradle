@@ -1,6 +1,8 @@
 buildscript {
     repositories {
-        jcenter()
+        // Begin Felix Hu 2019-04-22
+        jcenter() { url "http://jcenter.bintray.com/" }
+        // End Felix Hu 2019-04-22
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.2'
@@ -9,7 +11,9 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
+        // Begin Felix Hu 2019-04-22
+        jcenter() { url "http://jcenter.bintray.com/" }
+        // End Felix Hu 2019-04-22
     }
 }
 

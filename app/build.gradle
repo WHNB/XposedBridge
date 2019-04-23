@@ -78,7 +78,10 @@ task generateDocs(type: Javadoc, dependsOn: 'compileReleaseSources') {
         // This ensures that Javadoc can be inherited properly, but it
         // takes longer and throws a lot of errors (which we ignore here).
         def sdkSources = file("$android.sdkDirectory/sources/$android.compileSdkVersion")
-        assert sdkSources.exists()
+        // Begin Felix Hu 2019-04-22
+        // assert sdkSources.exists()
+        // End Felix Hu 2019-04-22
+
         addFileOption 'sourcepath', sdkSources
 
         failOnError = false
